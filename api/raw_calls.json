@@ -1,0 +1,17 @@
+{
+    "add_basic_authentication": true,
+    "add_to_header": true,
+    "auth": "oauth2_user",
+    "authentication_url": "https://app.asana.com/-/oauth_authorize",
+    "calls": {
+        "AAD": {
+            "method": "get",
+            "name": "API Call",
+            "publish_as": "data",
+            "rank": 0
+        }
+    },
+    "generate_token_from_code_uri": "https://app.asana.com/-/oauth_token",
+    "human": "Asana",
+    "oauth_user_data_call": "https://app.asana.com/api/1.0/users/me"
+}
