@@ -5,10 +5,64 @@
     "authentication_url": "https://app.asana.com/-/oauth_authorize",
     "calls": {
         "AAD": {
+            "doc_link": "https://asana.com/developers/api-reference/users",
+            "initialized": true,
             "method": "get",
-            "name": "API Call",
+            "name": "GET currently authenticated user",
             "publish_as": "data",
-            "rank": 0
+            "rank": 0,
+            "ret_value": "api.1503064406883x175911454883446800.plugin_api.AAD",
+            "types": "{\"plugin_api.AAD\":{\"caption\":\"GET /users/me\",\"fields\":{\"_p_data.id\":{\"ret_value\":\"number\",\"caption\":\"id\",\"path\":[\"data\",\"id\"]},\"_p_data.email\":{\"ret_value\":\"text\",\"caption\":\"email\",\"path\":[\"data\",\"email\"]},\"_p_data.name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"data\",\"name\"]},\"_p_data.photo.image_21x21\":{\"ret_value\":\"image\",\"caption\":\"photo image_21x21\",\"path\":[\"data\",\"photo\",\"image_21x21\"]},\"_p_data.photo.image_27x27\":{\"ret_value\":\"image\",\"caption\":\"photo image_27x27\",\"path\":[\"data\",\"photo\",\"image_27x27\"]},\"_p_data.photo.image_36x36\":{\"ret_value\":\"image\",\"caption\":\"photo image_36x36\",\"path\":[\"data\",\"photo\",\"image_36x36\"]},\"_p_data.photo.image_60x60\":{\"ret_value\":\"image\",\"caption\":\"photo image_60x60\",\"path\":[\"data\",\"photo\",\"image_60x60\"]},\"_p_data.photo.image_128x128\":{\"ret_value\":\"image\",\"caption\":\"photo image_128x128\",\"path\":[\"data\",\"photo\",\"image_128x128\"]},\"_p_data.workspaces\":{\"ret_value\":\"list.api.1503064406883x175911454883446800.plugin_api.AAD.data.workspaces\",\"caption\":\"workspaces\",\"path\":[\"data\",\"workspaces\"]}}},\"plugin_api.AAD.data.workspaces\":{\"caption\":\"GET /users/me data workspace\",\"fields\":{\"_p_id\":{\"ret_value\":\"number\",\"caption\":\"id\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"name\"]}}}}",
+            "url": "https://app.asana.com/api/1.0/users/me"
+        },
+        "AAG": {
+            "doc_link": "https://asana.com/developers/api-reference/users",
+            "initialized": true,
+            "method": "get",
+            "name": "GET all users",
+            "publish_as": "data",
+            "rank": 2,
+            "ret_value": "api.1503064406883x175911454883446800.plugin_api.AAG",
+            "types": "{\"plugin_api.AAG\":{\"caption\":\"GET /user\",\"fields\":{\"_p_data\":{\"ret_value\":\"list.api.1503064406883x175911454883446800.plugin_api.AAG.data\",\"caption\":\"data\",\"path\":[\"data\"]}}},\"plugin_api.AAG.data\":{\"caption\":\"GET /users data\",\"fields\":{\"_p_id\":{\"ret_value\":\"number\",\"caption\":\"id\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"name\"]}}}}",
+            "url": "https://app.asana.com/api/1.0/users"
+        },
+        "AAH": {
+            "doc_link": "https://asana.com/developers/api-reference/users",
+            "initialized": true,
+            "method": "get",
+            "name": "GET single user with provided ID",
+            "publish_as": "data",
+            "rank": 1,
+            "ret_value": "api.1503064406883x175911454883446800.plugin_api.AAH",
+            "types": "{\"plugin_api.AAH\":{\"caption\":\"GET single user with provided ID\",\"fields\":{\"_p_data.id\":{\"ret_value\":\"number\",\"caption\":\"id\",\"path\":[\"data\",\"id\"]},\"_p_data.email\":{\"ret_value\":\"text\",\"caption\":\"email\",\"path\":[\"data\",\"email\"]},\"_p_data.name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"data\",\"name\"]},\"_p_data.photo.image_21x21\":{\"ret_value\":\"image\",\"caption\":\"photo image_21x21\",\"path\":[\"data\",\"photo\",\"image_21x21\"]},\"_p_data.photo.image_27x27\":{\"ret_value\":\"image\",\"caption\":\"photo image_27x27\",\"path\":[\"data\",\"photo\",\"image_27x27\"]},\"_p_data.photo.image_36x36\":{\"ret_value\":\"image\",\"caption\":\"photo image_36x36\",\"path\":[\"data\",\"photo\",\"image_36x36\"]},\"_p_data.photo.image_60x60\":{\"ret_value\":\"image\",\"caption\":\"photo image_60x60\",\"path\":[\"data\",\"photo\",\"image_60x60\"]},\"_p_data.photo.image_128x128\":{\"ret_value\":\"image\",\"caption\":\"photo image_128x128\",\"path\":[\"data\",\"photo\",\"image_128x128\"]},\"_p_data.workspaces\":{\"ret_value\":\"list.api.1503064406883x175911454883446800.plugin_api.AAH.data.workspaces\",\"caption\":\"workspaces\",\"path\":[\"data\",\"workspaces\"]}}},\"plugin_api.AAH.data.workspaces\":{\"caption\":\"GET single user with provided ID data workspace\",\"fields\":{\"_p_id\":{\"ret_value\":\"number\",\"caption\":\"id\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"name\"]}}}}",
+            "url": "https://app.asana.com/api/1.0/users/[:user]",
+            "url_params": {
+                "AAI": {
+                    "key": ":user",
+                    "private": true,
+                    "value": "252052481025063",
+                    "visibility": "public"
+                }
+            }
+        },
+        "AAJ": {
+            "doc_link": "https://asana.com/developers/api-reference/users",
+            "initialized": true,
+            "method": "get",
+            "name": "GET all users in provided worksapce",
+            "publish_as": "data",
+            "rank": 3,
+            "ret_value": "api.1503064406883x175911454883446800.plugin_api.AAJ",
+            "types": "{\"plugin_api.AAJ\":{\"caption\":\"GET /workspaces/:workspace/user\",\"fields\":{\"_p_data\":{\"ret_value\":\"list.api.1503064406883x175911454883446800.plugin_api.AAJ.data\",\"caption\":\"data\",\"path\":[\"data\"]}}},\"plugin_api.AAJ.data\":{\"caption\":\"GET /workspaces/:workspace/users data\",\"fields\":{\"_p_id\":{\"ret_value\":\"number\",\"caption\":\"id\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"name\"]}}}}",
+            "url": "https://app.asana.com/api/1.0/workspaces/[:workspace]/users",
+            "url_params": {
+                "AAR": {
+                    "key": ":workspace",
+                    "private": true,
+                    "value": "252031424192254",
+                    "visibility": "public"
+                }
+            }
         }
     },
     "generate_token_from_code_uri": "https://app.asana.com/-/oauth_token",
