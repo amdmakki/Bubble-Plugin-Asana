@@ -88,7 +88,7 @@
             "publish_as": "data",
             "rank": 1,
             "ret_value": "api.1503064406883x175911454883446800.plugin_api.ABE",
-            "types": "{\"plugin_api.ABE\":{\"caption\":\"Get single Workspace \",\"fields\":{\"_p_data.id\":{\"ret_value\":\"number\",\"caption\":\"id\",\"path\":[\"data\",\"id\"]},\"_p_data.email_domains\":{\"ret_value\":\"list.text\",\"caption\":\"email_domains\",\"path\":[\"data\",\"email_domains\"]},\"_p_data.is_organization\":{\"ret_value\":\"boolean\",\"caption\":\"is_organization\",\"path\":[\"data\",\"is_organization\"]},\"_p_data.name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"data\",\"name\"]}}}}",
+            "types": "{\"plugin_api.ABE\":{\"caption\":\"Get single Workspace \",\"fields\":{\"_p_data\":{\"ret_value\":\"list.api.1503064406883x175911454883446800.plugin_api.ABE.data\",\"caption\":\"data\",\"path\":[\"data\"]}}},\"plugin_api.ABE.data\":{\"caption\":\"Get single Workspace  data\",\"fields\":{\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"name\"]}}}}",
             "url": "https://app.asana.com/api/1.0/workspaces/[:workspace]",
             "url_params": {
                 "ABF": {
@@ -326,15 +326,33 @@
             "types": "{\"plugin_api.ABe\":{\"caption\":\"Get Tasks by Assignee\",\"fields\":{\"_p_data\":{\"ret_value\":\"list.api.1503064406883x175911454883446800.plugin_api.ABe.data\",\"caption\":\"data\",\"path\":[\"data\"]},\"_p_next_page.offset\":{\"ret_value\":\"text\",\"caption\":\"next_page offset\",\"path\":[\"next_page\",\"offset\"]},\"_p_next_page.path\":{\"ret_value\":\"text\",\"caption\":\"next_page path\",\"path\":[\"next_page\",\"path\"]},\"_p_next_page.uri\":{\"ret_value\":\"text\",\"caption\":\"next_page uri\",\"path\":[\"next_page\",\"uri\"]}}},\"plugin_api.ABe.data\":{\"caption\":\"Get Tasks by Assignee data\",\"fields\":{\"_p_id\":{\"ret_value\":\"number\",\"caption\":\"id\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"name\"]}}}}",
             "url": "https://app.asana.com/api/1.0/tasks"
         },
-        "ABn": {
-            "body_type": "form_data",
+        "ABs": {
             "data_type": "JSON",
-            "get_headers": true,
+            "headers": {
+            },
+            "initialized": true,
             "method": "get",
-            "name": "API Call",
+            "name": "Get all Teams",
+            "params": {
+                "ACD": {
+                    "key": "limit",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
             "publish_as": "data",
             "rank": 14,
-            "url": "https://app.asana.com/api/1.0/webhooks/43214"
+            "ret_value": "api.1503064406883x175911454883446800.plugin_api.ABs",
+            "types": "{\"plugin_api.ABs\":{\"caption\":\"Get all Team\",\"fields\":{\"_p_data\":{\"ret_value\":\"list.api.1503064406883x175911454883446800.plugin_api.ABs.data\",\"caption\":\"data\",\"path\":[\"data\"]},\"_p_next_page.offset\":{\"ret_value\":\"number_range\",\"caption\":\"next_page offset\",\"path\":[\"next_page\",\"offset\"]},\"_p_next_page.path\":{\"ret_value\":\"text\",\"caption\":\"next_page path\",\"path\":[\"next_page\",\"path\"]},\"_p_next_page.uri\":{\"ret_value\":\"text\",\"caption\":\"next_page uri\",\"path\":[\"next_page\",\"uri\"]}}},\"plugin_api.ABs.data\":{\"caption\":\"Get all Teams data\",\"fields\":{\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"name\"]}}}}",
+            "url": "https://app.asana.com/api/1.0/organizations/[:organization]/teams",
+            "url_params": {
+                "ACF": {
+                    "key": ":organization",
+                    "private": true,
+                    "value": ""
+                }
+            }
         }
     },
     "generate_token_from_code_uri": "https://app.asana.com/-/oauth_token",
