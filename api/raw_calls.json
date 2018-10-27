@@ -1,5 +1,6 @@
 {
     "add_basic_authentication": true,
+    "add_offline": true,
     "add_to_header": true,
     "auth": "oauth2_user",
     "authentication_url": "https://app.asana.com/-/oauth_authorize",
@@ -100,12 +101,16 @@
             }
         },
         "ABG": {
+            "body_type": "form_data",
+            "data_type": "JSON",
             "doc_link": "https://asana.com/developers/api-reference/workspaces",
+            "get_headers": false,
             "initialized": true,
             "method": "get",
             "name": "Get all Workspaces",
             "params": {
                 "ABH": {
+                    "doc": "",
                     "key": "limit",
                     "optional": true,
                     "private": true,
@@ -236,7 +241,7 @@
                 }
             },
             "publish_as": "data",
-            "rank": 13,
+            "rank": 11,
             "ret_value": "api.1503064406883x175911454883446800.plugin_api.ABV",
             "types": "{\"plugin_api.ABV\":{\"caption\":\"Get Task storie\",\"fields\":{\"_p_data\":{\"ret_value\":\"list.api.1503064406883x175911454883446800.plugin_api.ABV.data\",\"caption\":\"data\",\"path\":[\"data\"]},\"_p_next_page.offset\":{\"ret_value\":\"text\",\"caption\":\"next_page offset\",\"path\":[\"next_page\",\"offset\"]},\"_p_next_page.path\":{\"ret_value\":\"text\",\"caption\":\"next_page path\",\"path\":[\"next_page\",\"path\"]},\"_p_next_page.uri\":{\"ret_value\":\"text\",\"caption\":\"next_page uri\",\"path\":[\"next_page\",\"uri\"]}}},\"plugin_api.ABV.data\":{\"caption\":\"Get Task stories data\",\"fields\":{\"_p_id\":{\"ret_value\":\"number\",\"caption\":\"id\",\"path\":[\"id\"]},\"_p_created_at\":{\"ret_value\":\"text\",\"caption\":\"created_at\",\"path\":[\"created_at\"]},\"_p_created_by.id\":{\"ret_value\":\"number\",\"caption\":\"created_by id\",\"path\":[\"created_by\",\"id\"]},\"_p_created_by.name\":{\"ret_value\":\"text\",\"caption\":\"created_by name\",\"path\":[\"created_by\",\"name\"]},\"_p_text\":{\"ret_value\":\"text\",\"caption\":\"text\",\"path\":[\"text\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"path\":[\"type\"]}}}}",
             "url": "https://app.asana.com/api/1.0/tasks/[:task]/stories",
@@ -245,51 +250,6 @@
                     "key": ":task",
                     "private": true,
                     "value": "",
-                    "visibility": "public"
-                }
-            }
-        },
-        "ABY": {
-            "doc_link": "https://asana.com/developers/api-reference/tasks",
-            "method": "get",
-            "name": "Get Task by tag",
-            "params": {
-                "ABa": {
-                    "key": "limit",
-                    "optional": true,
-                    "private": true,
-                    "visibility": "public"
-                }
-            },
-            "publish_as": "data",
-            "rank": 11,
-            "url": "https://app.asana.com/api/1.0/tags/[:tag]/tasks",
-            "url_params": {
-                "ABZ": {
-                    "key": ":tag",
-                    "private": true,
-                    "visibility": "public"
-                }
-            }
-        },
-        "ABb": {
-            "method": "get",
-            "name": "Get all Tags Task is in",
-            "params": {
-                "ABd": {
-                    "key": "limit",
-                    "optional": true,
-                    "private": true,
-                    "visibility": "public"
-                }
-            },
-            "publish_as": "data",
-            "rank": 12,
-            "url": "https://app.asana.com/api/1.0/tasks/[:task]/tags",
-            "url_params": {
-                "ABc": {
-                    "key": ":task",
-                    "private": true,
                     "visibility": "public"
                 }
             }
@@ -327,9 +287,8 @@
             "url": "https://app.asana.com/api/1.0/tasks"
         },
         "ABs": {
+            "body_type": "json",
             "data_type": "JSON",
-            "headers": {
-            },
             "initialized": true,
             "method": "get",
             "name": "Get all Teams",
@@ -342,7 +301,7 @@
                 }
             },
             "publish_as": "data",
-            "rank": 14,
+            "rank": 12,
             "ret_value": "api.1503064406883x175911454883446800.plugin_api.ABs",
             "types": "{\"plugin_api.ABs\":{\"caption\":\"Get all Team\",\"fields\":{\"_p_data\":{\"ret_value\":\"list.api.1503064406883x175911454883446800.plugin_api.ABs.data\",\"caption\":\"data\",\"path\":[\"data\"]},\"_p_next_page.offset\":{\"ret_value\":\"number_range\",\"caption\":\"next_page offset\",\"path\":[\"next_page\",\"offset\"]},\"_p_next_page.path\":{\"ret_value\":\"text\",\"caption\":\"next_page path\",\"path\":[\"next_page\",\"path\"]},\"_p_next_page.uri\":{\"ret_value\":\"text\",\"caption\":\"next_page uri\",\"path\":[\"next_page\",\"uri\"]}}},\"plugin_api.ABs.data\":{\"caption\":\"Get all Teams data\",\"fields\":{\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"name\"]}}}}",
             "url": "https://app.asana.com/api/1.0/organizations/[:organization]/teams",
@@ -353,20 +312,18 @@
                     "value": ""
                 }
             }
+        },
+        "token_call": {
+            "method": "post",
+            "url": ""
         }
     },
+    "email_path": "id_token",
     "generate_token_from_code_uri": "https://app.asana.com/-/oauth_token",
     "header_key": "Authorization: Bearer",
     "human": "Asana",
+    "id_path": "id_token",
     "oauth_user_data_call": "https://app.asana.com/api/1.0/users/me",
     "scope": "",
-    "shared_headers": {
-        "ABi": {
-            "key": "",
-            "private": true,
-            "value": "https://app.asana.com/-/oauth_token",
-            "visibility": "hidden"
-        }
-    },
     "token_data_type": false
 }
