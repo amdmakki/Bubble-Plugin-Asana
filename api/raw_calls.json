@@ -73,11 +73,10 @@
             "types": "{\"plugin_api.AAJ\":{\"caption\":\"GET /workspaces/:workspace/user\",\"fields\":{\"_p_data\":{\"ret_value\":\"list.api.1503064406883x175911454883446800.plugin_api.AAJ.data\",\"caption\":\"data\",\"path\":[\"data\"]}}},\"plugin_api.AAJ.data\":{\"caption\":\"GET /workspaces/:workspace/users data\",\"fields\":{\"_p_id\":{\"ret_value\":\"number\",\"caption\":\"id\",\"path\":[\"id\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"name\"]}}}}",
             "url": "https://app.asana.com/api/1.0/workspaces/[:workspace]/users",
             "url_params": {
-                "AAR": {
+                "ACm": {
                     "key": ":workspace",
                     "private": true,
-                    "value": "",
-                    "visibility": "public"
+                    "value": ""
                 }
             }
         },
@@ -101,7 +100,7 @@
             }
         },
         "ABG": {
-            "body_type": "form_data",
+            "body_type": "json",
             "data_type": "JSON",
             "doc_link": "https://asana.com/developers/api-reference/workspaces",
             "get_headers": false,
@@ -144,6 +143,7 @@
             }
         },
         "ABK": {
+            "doc_link": "https://asana.com/developers/api-reference/tasks",
             "initialized": true,
             "method": "get",
             "name": "Get all Tasks in Project",
@@ -289,6 +289,8 @@
         "ABs": {
             "body_type": "json",
             "data_type": "JSON",
+            "doc_link": "https://asana.com/developers/api-reference/teams",
+            "get_headers": false,
             "initialized": true,
             "method": "get",
             "name": "Get all Teams",
@@ -297,7 +299,8 @@
                     "key": "limit",
                     "optional": true,
                     "private": true,
-                    "value": ""
+                    "value": "",
+                    "visibility": "public"
                 }
             },
             "publish_as": "data",
@@ -318,11 +321,11 @@
             "url": ""
         }
     },
-    "email_path": "id_token",
+    "email_path": "email",
     "generate_token_from_code_uri": "https://app.asana.com/-/oauth_token",
     "header_key": "Authorization: Bearer",
     "human": "Asana",
-    "id_path": "id_token",
+    "id_path": "data",
     "oauth_user_data_call": "https://app.asana.com/api/1.0/users/me",
     "scope": "",
     "token_data_type": false
