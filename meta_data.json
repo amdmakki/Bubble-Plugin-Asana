@@ -1,0 +1,17 @@
+{
+    "categories": {
+        "0": "social network",
+        "1": "productivity",
+        "2": "visual elements",
+        "3": "data (things)",
+        "4": "analytics",
+        "5": "technical"
+    },
+    "description": "Automate or integrate your Asana app with Bubble\n\nAuthorixation to connect Asana with your Bubble app.\n. \nYou can create your own custom calls or request ones by joining the community and expanding this plugin with new API calls, Elements & Actions.",
+    "image": "//s3.amazonaws.com/appforest_uf/f1503220770463x591460141353309200/Asana_logo.svg__1_.png",
+    "instructions": "1. In Asana, go to profile settings apps, manage developer apps and add new application\n\n2. Please insert the call back url in your Asana developer app as per your bubble app url that will be triggering the workflow\n\n3. Insert App ID/Client ID as per your asana developer app instructions\n\n4. Insert App secret/Client Secret as per your asana developer app instructions\n\n",
+    "license": "open_source",
+    "link": "www.asana.com",
+    "name": "Asana",
+    "plugin_instructions": "To receive App ID & App Secret\n\nPlease go to Asana Profile/Image Icon.\nClick on My Profile Settings\nClick on Apps\nClick on manage Developer Apps\n\nCreate new apps \nFollow the instructions to get an \nApp ID:\nApp Secret: \n\nInsert App ID & App Secret in Asana Plugin in Bubble\n\nEnjoy!\n"
+}

@@ -1,5 +1,7 @@
 {
+    "assets": {
+    },
     "dependencies": {
-        "use_jquery": true
+        "use_jquery": false
     }
 }
