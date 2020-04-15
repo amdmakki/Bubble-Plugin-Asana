@@ -1,6 +1,4 @@
 {
-    "assets": {
-    },
     "dependencies": {
         "use_jquery": false
     }

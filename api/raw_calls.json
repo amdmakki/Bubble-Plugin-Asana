@@ -487,13 +487,13 @@
             "doc_link": "https://developers.asana.com/docs/tasks",
             "initialized": true,
             "method": "post",
-            "name": "Post - [task] to [project]",
+            "name": "Post - Add [task] to [projects] ",
             "params": {
                 "AEI": {
                     "doc": "Enter Project id",
                     "key": "project",
                     "private": true,
-                    "value": "743279399016426"
+                    "value": ""
                 },
                 "AEJ": {
                     "doc": "Enter section id",
@@ -528,32 +528,9 @@
                     "doc": "Enter existing Task id that you would like to add to project",
                     "key": "task",
                     "private": true,
-                    "value": "957869185559923"
+                    "value": ""
                 }
             }
-        },
-        "AEM": {
-            "body_type": "form_data",
-            "doc_link": "https://developers.asana.com/docs/webhooks",
-            "initialized": false,
-            "method": "post",
-            "name": "Post - create 'webhook'",
-            "params": {
-                "AEN": {
-                    "key": "resource",
-                    "private": true,
-                    "value": "743999691222983"
-                },
-                "AEO": {
-                    "key": "target",
-                    "private": true,
-                    "value": "https://yourapp.bubbleapps.io/version-test/api/1.1/wf/asana"
-                }
-            },
-            "publish_as": "data",
-            "rank": 21,
-            "should_reinitialize": true,
-            "url": "https://app.asana.com/api/1.0/webhooks"
         },
         "AEP": {
             "doc_link": "https://asana.com/developers/api-reference/users",
@@ -598,6 +575,226 @@
             "should_reinitialize": true,
             "types": "{\"plugin_api.AEY\":{\"caption\":\"GET - 'all workspaces'\",\"fields\":{\"_p_data\":{\"ret_value\":\"list.api.1503064406883x175911454883446800.plugin_api.AEY.data\",\"caption\":\"data\",\"path\":[\"data\"]}}},\"plugin_api.AEY.data\":{\"caption\":\"GET - 'all workspaces' data\",\"fields\":{\"_p_gid\":{\"ret_value\":\"text\",\"caption\":\"gid\",\"path\":[\"gid\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"name\"]},\"_p_resource_type\":{\"ret_value\":\"text\",\"caption\":\"resource_type\",\"path\":[\"resource_type\"]}}}}",
             "url": "https://app.asana.com/api/1.0/workspaces"
+        },
+        "AEd": {
+            "body": "",
+            "body_type": "form_data",
+            "doc_link": "https://developers.asana.com/docs/create-a-task",
+            "initialized": true,
+            "method": "post",
+            "name": "Create a Task",
+            "params": {
+                "AEp": {
+                    "doc": "entering workspace is compulsory",
+                    "key": "workspace",
+                    "private": true,
+                    "value": ""
+                },
+                "AEq": {
+                    "key": "name",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "AEr": {
+                    "key": "assignee",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "AEs": {
+                    "doc": "enter all projects id you would like associate with this task",
+                    "key": "projects",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "AEt": {
+                    "key": "parent",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "AEu": {
+                    "key": "tags",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "AEv": {
+                    "key": "start_on",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "AEw": {
+                    "key": "due_on",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "AEx": {
+                    "key": "due_at",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "AEy": {
+                    "key": "followers",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "AEz": {
+                    "key": "notes",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "AFA": {
+                    "doc": "write true for like, false to un like",
+                    "key": "liked",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "AFB": {
+                    "doc": "",
+                    "key": "approval_status",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "AFC": {
+                    "doc": "write true for completed, write false to un complete",
+                    "key": "completed",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "publish_as": "action",
+            "rank": 21,
+            "ret_value": "api.1503064406883x175911454883446800.plugin_api.AEd",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AEd\":{\"caption\":\"Create a Task\",\"fields\":{\"_p_data.gid\":{\"ret_value\":\"text\",\"caption\":\"gid\",\"path\":[\"data\",\"gid\"]},\"_p_data.projects\":{\"ret_value\":\"list.text\",\"caption\":\"projects\",\"path\":[\"data\",\"projects\"]},\"_p_data.resource_type\":{\"ret_value\":\"text\",\"caption\":\"resource_type\",\"path\":[\"data\",\"resource_type\"]},\"_p_data.created_at\":{\"ret_value\":\"text\",\"caption\":\"created_at\",\"path\":[\"data\",\"created_at\"]},\"_p_data.modified_at\":{\"ret_value\":\"text\",\"caption\":\"modified_at\",\"path\":[\"data\",\"modified_at\"]},\"_p_data.name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"data\",\"name\"]},\"_p_data.notes\":{\"ret_value\":\"text\",\"caption\":\"notes\",\"path\":[\"data\",\"notes\"]},\"_p_data.assignee\":{\"ret_value\":\"text\",\"caption\":\"assignee\",\"path\":[\"data\",\"assignee\"]},\"_p_data.completed\":{\"ret_value\":\"boolean\",\"caption\":\"completed\",\"path\":[\"data\",\"completed\"]},\"_p_data.completed_at\":{\"ret_value\":\"text\",\"caption\":\"completed_at\",\"path\":[\"data\",\"completed_at\"]},\"_p_data.due_on\":{\"ret_value\":\"text\",\"caption\":\"due_on\",\"path\":[\"data\",\"due_on\"]},\"_p_data.due_at\":{\"ret_value\":\"text\",\"caption\":\"due_at\",\"path\":[\"data\",\"due_at\"]},\"_p_data.resource_subtype\":{\"ret_value\":\"text\",\"caption\":\"resource_subtype\",\"path\":[\"data\",\"resource_subtype\"]},\"_p_data.start_on\":{\"ret_value\":\"text\",\"caption\":\"start_on\",\"path\":[\"data\",\"start_on\"]},\"_p_data.workspace.gid\":{\"ret_value\":\"text\",\"caption\":\"workspace gid\",\"path\":[\"data\",\"workspace\",\"gid\"]},\"_p_data.workspace.resource_type\":{\"ret_value\":\"text\",\"caption\":\"workspace resource_type\",\"path\":[\"data\",\"workspace\",\"resource_type\"]},\"_p_data.workspace.name\":{\"ret_value\":\"text\",\"caption\":\"workspace name\",\"path\":[\"data\",\"workspace\",\"name\"]},\"_p_data.num_hearts\":{\"ret_value\":\"number\",\"caption\":\"num_hearts\",\"path\":[\"data\",\"num_hearts\"]},\"_p_data.num_likes\":{\"ret_value\":\"number\",\"caption\":\"num_likes\",\"path\":[\"data\",\"num_likes\"]},\"_p_data.parent\":{\"ret_value\":\"text\",\"caption\":\"parent\",\"path\":[\"data\",\"parent\"]},\"_p_data.hearted\":{\"ret_value\":\"boolean\",\"caption\":\"hearted\",\"path\":[\"data\",\"hearted\"]},\"_p_data.followers\":{\"ret_value\":\"list.text\",\"caption\":\"followers\",\"path\":[\"data\",\"followers\"]},\"_p_data.liked\":{\"ret_value\":\"boolean\",\"caption\":\"liked\",\"path\":[\"data\",\"liked\"]},\"_p_data.memberships\":{\"ret_value\":\"list.api.1503064406883x175911454883446800.plugin_api.AEd.data.memberships\",\"caption\":\"memberships\",\"path\":[\"data\",\"memberships\"]},\"_p_data.assignee_status\":{\"ret_value\":\"text\",\"caption\":\"assignee_status\",\"path\":[\"data\",\"assignee_status\"]}}},\"text\":{\"caption\":\"Create a Task data follower\",\"fields\":{\"_p_gid\":{\"ret_value\":\"text\",\"caption\":\"gid\",\"path\":[\"gid\"]},\"_p_resource_type\":{\"ret_value\":\"text\",\"caption\":\"resource_type\",\"path\":[\"resource_type\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"name\"]}}},\"plugin_api.AEd.data.memberships\":{\"caption\":\"Create a Task data membership\",\"fields\":{\"_p_project.gid\":{\"ret_value\":\"text\",\"caption\":\"project gid\",\"path\":[\"project\",\"gid\"]},\"_p_project.resource_type\":{\"ret_value\":\"text\",\"caption\":\"project resource_type\",\"path\":[\"project\",\"resource_type\"]},\"_p_project.name\":{\"ret_value\":\"text\",\"caption\":\"project name\",\"path\":[\"project\",\"name\"]},\"_p_section.gid\":{\"ret_value\":\"text\",\"caption\":\"section gid\",\"path\":[\"section\",\"gid\"]},\"_p_section.resource_type\":{\"ret_value\":\"text\",\"caption\":\"section resource_type\",\"path\":[\"section\",\"resource_type\"]},\"_p_section.name\":{\"ret_value\":\"text\",\"caption\":\"section name\",\"path\":[\"section\",\"name\"]}}}}",
+            "url": "https://app.asana.com/api/1.0/tasks"
+        },
+        "AFE": {
+            "0": "A",
+            "1": "F",
+            "2": "D",
+            "body": "",
+            "body_type": "form_data",
+            "doc_link": "https://developers.asana.com/docs/update-a-task",
+            "initialized": true,
+            "method": "put",
+            "name": "Update a Task ",
+            "params": {
+                "AEp": {
+                    "doc": "entering workspace is compulsory",
+                    "key": "workspace",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "AEq": {
+                    "key": "name",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "AEr": {
+                    "key": "assignee",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "AEs": {
+                    "doc": "enter all projects id you would like associate with this task",
+                    "key": "projects",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "AEt": {
+                    "key": "parent",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "AEu": {
+                    "key": "tags",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "AEv": {
+                    "key": "start_on",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "AEw": {
+                    "key": "due_on",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "AEx": {
+                    "key": "due_at",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "AEy": {
+                    "key": "followers",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "AEz": {
+                    "key": "notes",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "AFA": {
+                    "doc": "write true for like, false to un like",
+                    "key": "liked",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "AFB": {
+                    "doc": "",
+                    "key": "approval_status",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "AFC": {
+                    "doc": "write true for completed, write false to un complete",
+                    "key": "completed",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "publish_as": "action",
+            "rank": 22,
+            "ret_value": "api.1503064406883x175911454883446800.plugin_api.AFE",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AFD\":{\"caption\":\"Update a Task \",\"fields\":{\"_p_data.gid\":{\"ret_value\":\"text\",\"caption\":\"gid\",\"path\":[\"data\",\"gid\"]},\"_p_data.projects\":{\"ret_value\":\"list.text\",\"caption\":\"projects\",\"path\":[\"data\",\"projects\"]},\"_p_data.resource_type\":{\"ret_value\":\"text\",\"caption\":\"resource_type\",\"path\":[\"data\",\"resource_type\"]},\"_p_data.created_at\":{\"ret_value\":\"text\",\"caption\":\"created_at\",\"path\":[\"data\",\"created_at\"]},\"_p_data.modified_at\":{\"ret_value\":\"text\",\"caption\":\"modified_at\",\"path\":[\"data\",\"modified_at\"]},\"_p_data.name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"data\",\"name\"]},\"_p_data.notes\":{\"ret_value\":\"text\",\"caption\":\"notes\",\"path\":[\"data\",\"notes\"]},\"_p_data.assignee\":{\"ret_value\":\"text\",\"caption\":\"assignee\",\"path\":[\"data\",\"assignee\"]},\"_p_data.completed\":{\"ret_value\":\"boolean\",\"caption\":\"completed\",\"path\":[\"data\",\"completed\"]},\"_p_data.completed_at\":{\"ret_value\":\"text\",\"caption\":\"completed_at\",\"path\":[\"data\",\"completed_at\"]},\"_p_data.due_on\":{\"ret_value\":\"text\",\"caption\":\"due_on\",\"path\":[\"data\",\"due_on\"]},\"_p_data.due_at\":{\"ret_value\":\"text\",\"caption\":\"due_at\",\"path\":[\"data\",\"due_at\"]},\"_p_data.resource_subtype\":{\"ret_value\":\"text\",\"caption\":\"resource_subtype\",\"path\":[\"data\",\"resource_subtype\"]},\"_p_data.start_on\":{\"ret_value\":\"text\",\"caption\":\"start_on\",\"path\":[\"data\",\"start_on\"]},\"_p_data.workspace.gid\":{\"ret_value\":\"text\",\"caption\":\"workspace gid\",\"path\":[\"data\",\"workspace\",\"gid\"]},\"_p_data.workspace.resource_type\":{\"ret_value\":\"text\",\"caption\":\"workspace resource_type\",\"path\":[\"data\",\"workspace\",\"resource_type\"]},\"_p_data.workspace.name\":{\"ret_value\":\"text\",\"caption\":\"workspace name\",\"path\":[\"data\",\"workspace\",\"name\"]},\"_p_data.num_hearts\":{\"ret_value\":\"number\",\"caption\":\"num_hearts\",\"path\":[\"data\",\"num_hearts\"]},\"_p_data.num_likes\":{\"ret_value\":\"number\",\"caption\":\"num_likes\",\"path\":[\"data\",\"num_likes\"]},\"_p_data.parent\":{\"ret_value\":\"text\",\"caption\":\"parent\",\"path\":[\"data\",\"parent\"]},\"_p_data.hearted\":{\"ret_value\":\"boolean\",\"caption\":\"hearted\",\"path\":[\"data\",\"hearted\"]},\"_p_data.liked\":{\"ret_value\":\"boolean\",\"caption\":\"liked\",\"path\":[\"data\",\"liked\"]},\"_p_data.assignee_status\":{\"ret_value\":\"text\",\"caption\":\"assignee_status\",\"path\":[\"data\",\"assignee_status\"]},\"_p_data.followers\":{\"ret_value\":\"list.text\",\"caption\":\"followers\",\"path\":[\"data\",\"followers\"]},\"_p_data.memberships\":{\"ret_value\":\"list.api.1503064406883x175911454883446800.plugin_api.AFD.data.memberships\",\"caption\":\"memberships\",\"path\":[\"data\",\"memberships\"]}}},\"text\":{\"caption\":\"Update a Task  data follower\",\"fields\":{\"_p_gid\":{\"ret_value\":\"text\",\"caption\":\"gid\",\"path\":[\"gid\"]},\"_p_resource_type\":{\"ret_value\":\"text\",\"caption\":\"resource_type\",\"path\":[\"resource_type\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"name\"]}}},\"plugin_api.AFD.data.memberships\":{\"caption\":\"Update a Task  data membership\",\"fields\":{\"_p_project.gid\":{\"ret_value\":\"text\",\"caption\":\"project gid\",\"path\":[\"project\",\"gid\"]},\"_p_project.resource_type\":{\"ret_value\":\"text\",\"caption\":\"project resource_type\",\"path\":[\"project\",\"resource_type\"]},\"_p_project.name\":{\"ret_value\":\"text\",\"caption\":\"project name\",\"path\":[\"project\",\"name\"]},\"_p_section.gid\":{\"ret_value\":\"text\",\"caption\":\"section gid\",\"path\":[\"section\",\"gid\"]},\"_p_section.resource_type\":{\"ret_value\":\"text\",\"caption\":\"section resource_type\",\"path\":[\"section\",\"resource_type\"]},\"_p_section.name\":{\"ret_value\":\"text\",\"caption\":\"section name\",\"path\":[\"section\",\"name\"]}}}}",
+            "url": "https://app.asana.com/api/1.0/tasks/[task_gid]",
+            "url_params": {
+                "AFF": {
+                    "doc": "Enter id of Task you want to edit",
+                    "key": "task_gid",
+                    "private": true,
+                    "value": ""
+                }
+            }
         },
         "token_call": {
             "method": "post",
